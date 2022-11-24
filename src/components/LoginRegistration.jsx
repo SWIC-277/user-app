@@ -27,10 +27,17 @@ const fields = [
 
 function LoginRegistration({ handleSubmit }) {
   return (
-    <form>
+    <form className="w-max mx-auto flex flex-col gap-y-4 border p-8 rounded-md my-4">
       {fields.map((field) => (
         <Input key={field.id} {...field} />
       ))}
+
+      <button
+        type="submit"
+        className="px-4 py-2 rounded bg-green-500 text-white"
+      >
+        Register
+      </button>
     </form>
   );
 }
