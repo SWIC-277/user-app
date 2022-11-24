@@ -5,7 +5,12 @@ function App() {
     <Form
       handleSubmit={(e) => {
         e.preventDefault();
-        console.log("Form submitted!");
+
+        const fd = new FormData(e.target);
+        const data = Object.fromEntries(fd);
+
+        // TODO: Send data to server
+        console.log(data);
       }}
     />
   );

@@ -11,6 +11,7 @@ function Input({ id, isReq, label, minLen, maxLen, placeholder, type }) {
         id={id}
         minLength={minLen}
         maxLength={maxLen}
+        name={id}
         placeholder={placeholder || label || capitalize(id)}
         required={isReq}
         type={type || "text"}
