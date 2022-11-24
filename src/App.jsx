@@ -1,16 +1,17 @@
 import Form from "./components/LoginRegistration";
+import apiService from "./services/api.service";
 
 function App() {
   return (
     <Form
-      handleSubmit={(e) => {
+      handleSubmit={async (e) => {
         e.preventDefault();
 
         const fd = new FormData(e.target);
-        const data = Object.fromEntries(fd);
+        const newUser = Object.fromEntries(fd);
 
-        // TODO: Send data to server
-        console.log(data);
+        const results = await apiService.add(newUser);
+        console.log(results);
       }}
     />
   );
