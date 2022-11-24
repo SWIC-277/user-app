@@ -12,7 +12,7 @@ function Input({ id, isReq, label, minLen, maxLen, placeholder, type }) {
         minLength={minLen}
         maxLength={maxLen}
         placeholder={placeholder || label || capitalize(id)}
-        required={isReq || true}
+        required={isReq}
         type={type || "text"}
         className="px-4 py-2 rounded border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50"
       />
@@ -21,5 +21,9 @@ function Input({ id, isReq, label, minLen, maxLen, placeholder, type }) {
 }
 
 Input.propTypes = InputType;
+
+Input.defaultProps = {
+  isReq: true,
+};
 
 export default Input;

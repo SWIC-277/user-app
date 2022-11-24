@@ -1,5 +1,14 @@
+import Form from "./components/LoginRegistration";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <Form
+      handleSubmit={(e) => {
+        e.preventDefault();
+        console.log("Form submitted!");
+      }}
+    />
+  );
 }
 
 export default App;
