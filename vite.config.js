@@ -10,6 +10,7 @@ export default defineConfig({
       "@components": "/src/components",
       "@hooks": "/src/hooks",
       "@routes": "/src/routes",
+      "@types": "/src/types",
       "@services": "/src/services",
       "@utils": "/src/utils",
     },
